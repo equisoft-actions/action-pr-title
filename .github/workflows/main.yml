@@ -9,9 +9,11 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - uses: actions/checkout@master
-      - uses: actions/setup-node@v1
+
+      - uses: actions/setup-node@v6
         with:
-          node-version: '22.x'
+          node-version: '24.x'
+
       - run: npm install
       - name: Validate
         uses: ./
